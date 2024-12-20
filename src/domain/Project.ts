@@ -41,8 +41,8 @@ export class ProjectData {
   static cyclo: Project = {
     name: "Cyclo",
     images: {
-      logo: "/assets/images/projects/Cyclo.png",
-      banner: "",
+      logo: "/assets/images/projects/cyclo/CycloLogo.png",
+      banner: "/assets/images/projects/cyclo/CycloBanner.jpg",
       images: []
     },
     subtitle: "projects.cyclo.subtitle",
@@ -57,8 +57,8 @@ export class ProjectData {
   static ecoTime: Project = {
     name: "EcoTime",
     images: {
-      logo: "/assets/images/projects/EcoTime.png",
-      banner: "",
+      logo: "/assets/images/projects/ecotime/EcoTimeLogo.png",
+      banner: "/assets/images/projects/ecotime/EcoTimeBanner.jpg",
       images: []
     },
     subtitle: "projects.ecoTime.subtitle",
@@ -73,8 +73,8 @@ export class ProjectData {
   static split: Project = {
     name: "Split",
     images: {
-      logo: "/assets/images/projects/Split.png",
-      banner: "",
+      logo: "/assets/images/projects/split/SplitLogo.png",
+      banner: "/assets/images/projects/split/SplitBanner.jpg",
       images: []
     },
     subtitle: "projects.split.subtitle",
@@ -89,8 +89,8 @@ export class ProjectData {
   static tyradex: Project = {
     name: "Tyradex",
     images: {
-      logo: "/assets/images/projects/Tyradex.png",
-      banner: "",
+      logo: "/assets/images/projects/tyradex/TyradexLogo.png",
+      banner: "/assets/images/projects/tyradex/TyradexBanner.jpg",
       images: []
     },
     subtitle: "projects.tyradex.subtitle",
@@ -105,8 +105,8 @@ export class ProjectData {
   static tyradexKit: Project = {
     name: "TyradexKit",
     images: {
-      logo: "/assets/images/projects/Tyradex.png",
-      banner: "",
+      logo: "/assets/images/projects/tyradex/TyradexLogo.png",
+      banner: "/assets/images/projects/tyradex/TyradexBanner.jpg",
       images: []
     },
     subtitle: "projects.tyradexKit.subtitle",
