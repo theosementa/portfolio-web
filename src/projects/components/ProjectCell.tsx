@@ -16,7 +16,7 @@ export const ProjectCell = ({ project }: Props) => {
   return (
     <div className="bg-background-100 rounded-2xl border-2 border-background-200 flex flex-col h-full">
       <img
-        src={project.logo}
+        src={project.images.logo}
         alt="project logo"
         className="rounded-t-2xl w-full h-auto"
       />
