@@ -55,6 +55,12 @@ export class SkillData {
     link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     group: "Frontend"
   }
+  static vue: Skill = {
+    logo: "/assets/images/skills/frontend/vuedotjs.svg",
+    name: "Vue",
+    link: "https://vuejs.org/",
+    group: "Frontend"
+  }
   
   static nestjs: Skill = {
     logo: "/assets/images/skills/backend/nestjs.svg",
@@ -147,7 +153,8 @@ export class SkillData {
   static frontendSkills: Skill[] = [
     SkillData.html,
     SkillData.css,
-    SkillData.javascript
+    SkillData.javascript,
+    SkillData.vue
   ]
 
   static backendSkills: Skill[] = [

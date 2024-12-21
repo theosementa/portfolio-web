@@ -42,5 +42,25 @@
       "description": "Detailed description of my project.",
       "date": "December 2024 - Present"
     }
+  },
+  "experiences": {
+    "neopixl": {
+      "title": "iOS Developer",
+      "description": "Neoxipl are experts to support and guide you in the creation of your mobile app from A to Z. We are a team of passionate developers who are always looking for the best solutions to meet your needs.",
+      "startDate": "September 2023",
+      "endDate": "Present"
+    },
+    "efluid": {
+      "title": "Information Systems Tester",
+      "description": "Efluid is a software company that provides solutions for the energy sector. I was in charge of testing the information systems developed by the company.",
+      "startDate": "September 2022",
+      "endDate": "September 2023"
+    },
+    "antares": {
+      "title": "Technician Helpdesk",
+      "description": "Antares is a company that provides IT services to other companies. I was in charge of providing technical support to users.",
+      "startDate": "September 2021",
+      "endDate": "September 2022"
+    }
   }
 }

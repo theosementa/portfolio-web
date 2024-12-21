@@ -1,4 +1,6 @@
+import { ExperienceData } from "../../domain/Experience"
 import { SkillData } from "../../domain/Skill"
+import { ExperienceCell } from "../../experience/components/ExperienceCell"
 import { HeaderWithBio } from "../components/HeaderWithBio"
 import { SkillRow } from "../components/SkillRow"
 import { SkillsSection } from "../components/SkillsSection"
@@ -7,6 +9,7 @@ export const Home = () => {
   return (
     <div className="flex flex-col gap-24">
       <HeaderWithBio />
+
       <div className="flex flex-col gap-16">
         <SkillsSection title="Main Skills">
           {
@@ -39,6 +42,12 @@ export const Home = () => {
             ))
           }
         </SkillsSection>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ExperienceCell experience={ExperienceData.neopixl} />
+          <ExperienceCell experience={ExperienceData.efluid} />
+          <ExperienceCell experience={ExperienceData.antares} />
       </div>
     </div>
   )

@@ -1,5 +1,6 @@
 export interface Experience {
   title: string,
+  banner: string,
   company: string,
   startDate: string,
   endDate: string,
@@ -10,32 +11,35 @@ export interface Experience {
 
 export class ExperienceData {
   static neopixl: Experience = {
-    title: "iOS Developer",
+    title: "experiences.neopixl.title",
+    banner: "/assets/images/experiences/neopixl-banner.jpg",
     company: "Neopixl",
-    startDate: "September 2023",
-    endDate: "Present",
+    startDate: "experiences.neopixl.startDate",
+    endDate: "experiences.neopixl.endDate",
     location: "Differdange, Luxembourg",
-    description: "Neoxipl are experts to support and guide you in the creation of your mobile app from A to Z. We are a team of passionate developers who are always looking for the best solutions to meet your needs.",
+    description: "experiences.neopixl.description",
     website: "https://neopixl.lu/"
   }
 
   static efluid: Experience = {
-    title: "Information Systems Tester",
+    title: "experiences.efluid.title",
+    banner: "/assets/images/experiences/efluid-banner.jpg",
     company: "Efluid",
-    startDate: "September 2022",
-    endDate: "September 2023",
+    startDate: "experiences.efluid.startDate",
+    endDate: "experiences.efluid.endDate",
     location: "Metz, France",
-    description: "Efluid is a software company that provides solutions for the energy sector. I was in charge of testing the information systems developed by the company.",
+    description: "experiences.efluid.description",
     website: "https://www.efluid.com/"
   }
 
   static antares: Experience = {
-    title: "Technician Helpdesk",
+    title: "experiences.antares.title",
+    banner: "/assets/images/experiences/antares-banner.jpg",
     company: "Antares",
-    startDate: "September 2021",
-    endDate: "September 2022",
+    startDate: "experiences.antares.startDate",
+    endDate: "experiences.antares.endDate",
     location: "Metz, France",
-    description: "Antares is a company that provides IT services to other companies. I was in charge of providing technical support to users.",
+    description: "experiences.antares.description",
     website: "https://www.antares.fr/"
   }
 }
