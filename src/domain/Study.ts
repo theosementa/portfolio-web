@@ -10,32 +10,32 @@ export interface Study {
 
 export class StudyData {
   static master: Study = {
-    title: "Master's degree in Management and Computer Science",
-    school: "Metz Numeric Schoo",
-    startDate: "October 2024",
-    endDate: "October 2026",
+    title: "studies.master.title",
+    school: "Metz Numeric School",
+    startDate: "studies.master.startDate",
+    endDate: "studies.master.endDate",
     location: "Metz, France",
-    description: "The Master's degree in Management and Computer Science is a two-year program that provides students with the skills and knowledge needed to work as IT project managers.",
+    description: "studies.master.description",
     website: "https://www.metz-numeric-school.fr/"
   }
 
   static bachelor: Study = {
-    title: "Bachelor's degree in Full Stack Web Development",
+    title: "studies.bachelor.title",
     school: "Metz Numeric School",
-    startDate: "October 2023",
-    endDate: "October 2024",
+    startDate: "studies.bachelor.startDate",
+    endDate: "studies.bachelor.endDate",
     location: "Metz, France",
-    description: "The Bachelor's degree in Full Stack Web Development is a one-year program that provides students with the skills and knowledge needed to work as full stack web developers.",
+    description: "studies.bachelor.description",
     website: "https://www.metz-numeric-school.fr/"
   }
 
   static bts: Study = {
-    title: "Brevet de Technicien Supérieur (BTS) in System and Network Administration",
+    title: "studies.bts.title",
     school: "UIMM Lorraine",
-    startDate: "September 2021",
-    endDate: "September 2023",
+    startDate: "studies.bts.startDate",
+    endDate: "studies.bts.endDate",
     location: "Yutz, France",
-    description: "The BTS in System and Network Administration is a two-year program that provides students with the skills and knowledge needed to work as system and network administrators.",
+    description: "studies.bts.description",
     website: "https://www.uimm.fr/"
   }
 }

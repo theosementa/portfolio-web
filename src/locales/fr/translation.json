@@ -62,5 +62,25 @@
       "startDate": "Septembre 2021",
       "endDate": "Septembre 2022"
     }
+  },
+  "studies": {
+    "master": {
+      "title": "Master en gestion et en informatique",
+      "startDate": "Octobre 2024",
+      "endDate": "Octobre 2026",
+      "description": "Le Master en gestion et en informatique est un programme de deux ans qui permet aux étudiants d'acquérir des compétences en gestion et en informatique."
+    },
+    "bachelor": {
+      "title": "Licence en développement web full stack",
+      "startDate": "Octobre 2023",
+      "endDate": "Octobre 2024",
+      "description": "La licence en développement web full stack est un programme d'un an qui permet aux étudiants d'acquérir les compétences nécessaires pour travailler en tant que développeurs web full stack."
+    },
+    "bts": {
+      "title": "BTS en administration des systèmes et réseaux",
+      "startDate": "Septembre 2021",
+      "endDate": "Septembre 2023",
+      "description": "Le BTS en administration des systèmes et réseaux est un programme de deux ans qui permet aux étudiants d'acquérir les compétences nécessaires pour travailler en tant qu'administrateurs de systèmes et de réseaux."
+    }
   }
 }

@@ -62,5 +62,25 @@
       "startDate": "September 2021",
       "endDate": "September 2022"
     }
+  },
+  "studies": {
+    "master": {
+      "title": "Master's degree in Management and Computer Science",
+      "startDate": "October 2024",
+      "endDate": "October 2026",
+      "description": "The Master's degree in Management and Computer Science is a two-year program that provides students with the skills and knowledge needed to work as IT project managers."
+    },
+    "bachelor": {
+      "title": "Bachelor's degree in Full Stack Web Development",
+      "startDate": "October 2023",
+      "endDate": "October 2024",
+      "description": "The Bachelor's degree in Full Stack Web Development is a one-year program that provides students with the skills and knowledge needed to work as full stack web developers."
+    },
+    "bts": {
+      "title": "Advanced Technician's Certificate in System and Network Administration",
+      "startDate": "September 2021",
+      "endDate": "September 2023",
+      "description": "The BTS in System and Network Administration is a two-year program that provides students with the skills and knowledge needed to work as system and network administrators."
+    }
   }
 }
