@@ -14,7 +14,7 @@ export const ActionButton = ({ icon: Icon, text, isPrimary, type = ActionButtonT
     <button
       onClick={onClick}
       className={`
-        flex flex-row w-full justify-center items-center space-x-2 px-4 py-2 
+        flex flex-row w-full justify-center items-center space-x-2 px-4 py-2 transition duration-300 hover:scale-105
         ${isPrimary ? "bg-blue-600" : "bg-transparent border-2 border-blue-600"} 
         ${type == ActionButtonType.medium ? "h-16 rounded-2xl" : "h-auto rounded-lg"}
       `}
