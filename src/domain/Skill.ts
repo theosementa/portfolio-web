@@ -147,9 +147,7 @@ export class SkillData {
   static frontendSkills: Skill[] = [
     SkillData.html,
     SkillData.css,
-    SkillData.javascript,
-    SkillData.react,
-    SkillData.tailwind
+    SkillData.javascript
   ]
 
   static backendSkills: Skill[] = [

@@ -18,7 +18,7 @@ export const HeaderWithBio = () => {
           alt="theo's img"
           width={380}
           height={380}
-          className="rounded-full border-8 border-blue-600 shadow-lg"
+          className="rounded-full border-4 border-blue-600 shadow-lg"
         />
       </div>
     </div>
