@@ -83,7 +83,7 @@ export class ProjectData {
     date: "projects.split.date",
     downloadLink: "https://apps.apple.com/fr/app/split-partager-les-d%C3%A9penses/id6504157641",
     languages: ["Swift"],
-    frameworks: ["SwiftUI", "GoogleSignIn", "AuthenticationServices", "Lottie", "SocketIO", "PhotoUI"],
+    frameworks: ["SwiftUI", "GoogleSignIn", "AuthenticationServices", "Lottie", "SocketIO", "PhotoUI", "StoreKit"],
   }
 
   static tyradex: Project = {

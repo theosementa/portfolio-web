@@ -13,67 +13,58 @@ export const Home = () => {
     <div className="flex flex-col gap-32">
       <HeaderWithBio />
 
-      <div className="relative">
-        <div className="absolute -top-12" id="skills"></div>
-        <div className="flex flex-col gap-16">
-          <HomeSectionHeader title="Compétences" subtitle="Les compétences que j'ai acquise durant mon parcours." />
-          <div className="flex flex-col gap-8">
-            <SkillsSection title="Compétences principales">
-              {
-                SkillData.mainSkills.map(skill => (
-                  <SkillRow key={skill.name} skill={skill} />
-                ))
-              }
-            </SkillsSection>
+      <div id="skills" className="flex flex-col gap-16">
+        <HomeSectionHeader title="Compétences" subtitle="Les compétences que j'ai acquise durant mon parcours." />
+        <div className="flex flex-col gap-8">
+          <SkillsSection title="Compétences principales">
+            {
+              SkillData.mainSkills.map(skill => (
+                <SkillRow key={skill.name} skill={skill} />
+              ))
+            }
+          </SkillsSection>
 
-            <SkillsSection title="Frontend">
-              {
-                SkillData.frontendSkills.map(skill => (
-                  <SkillRow key={skill.name} skill={skill} />
-                ))
-              }
-            </SkillsSection>
+          <SkillsSection title="Frontend">
+            {
+              SkillData.frontendSkills.map(skill => (
+                <SkillRow key={skill.name} skill={skill} />
+              ))
+            }
+          </SkillsSection>
 
-            <SkillsSection title="Backend">
-              {
-                SkillData.backendSkills.map(skill => (
-                  <SkillRow key={skill.name} skill={skill} />
-                ))
-              }
-            </SkillsSection>
+          <SkillsSection title="Backend">
+            {
+              SkillData.backendSkills.map(skill => (
+                <SkillRow key={skill.name} skill={skill} />
+              ))
+            }
+          </SkillsSection>
 
-            <SkillsSection title="Outils">
-              {
-                SkillData.tools.map(skill => (
-                  <SkillRow key={skill.name} skill={skill} />
-                ))
-              }
-            </SkillsSection>
-          </div>
+          <SkillsSection title="Outils">
+            {
+              SkillData.tools.map(skill => (
+                <SkillRow key={skill.name} skill={skill} />
+              ))
+            }
+          </SkillsSection>
         </div>
       </div>
 
-      <div className="relative">
-        <div className="absolute -top-12" id="experiences"></div>
-        <div className="flex flex-col gap-16">
-          <HomeSectionHeader title="Expériences" subtitle="Mes expériences professionnelles depuis mon entrée sur le marché du travail." />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ExperienceCell experience={ExperienceData.neopixl} />
-            <ExperienceCell experience={ExperienceData.efluid} />
-            <ExperienceCell experience={ExperienceData.antares} />
-          </div>
+      <div id="experiences" className="flex flex-col gap-16">
+        <HomeSectionHeader title="Expériences" subtitle="Mes expériences professionnelles depuis mon entrée sur le marché du travail." />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ExperienceCell experience={ExperienceData.neopixl} />
+          <ExperienceCell experience={ExperienceData.efluid} />
+          <ExperienceCell experience={ExperienceData.antares} />
         </div>
       </div>
 
-      <div className="relative">
-        <div className="absolute -top-12" id="studies"></div>
-        <div className="flex flex-col gap-16">
-          <HomeSectionHeader title="Études" subtitle="Voici les études supérieures que j'ai éffectué." />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <StudyCell study={StudyData.master} />
-            <StudyCell study={StudyData.bachelor} />
-            <StudyCell study={StudyData.bts} />
-          </div>
+      <div id="studies" className="flex flex-col gap-16">
+        <HomeSectionHeader title="Études" subtitle="Voici les études supérieures que j'ai éffectué." />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <StudyCell study={StudyData.master} />
+          <StudyCell study={StudyData.bachelor} />
+          <StudyCell study={StudyData.bts} />
         </div>
       </div>
     </div>

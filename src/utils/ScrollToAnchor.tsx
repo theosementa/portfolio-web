@@ -17,7 +17,7 @@ function ScrollToAnchor() {
         const targetElement = document.getElementById(lastHash.current);
         if (targetElement) {
           const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-          const offset = 100;
+          const offset = 140;
           window.scrollTo({
             top: elementPosition - offset,
             behavior: 'smooth',
