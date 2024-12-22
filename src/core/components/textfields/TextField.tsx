@@ -9,7 +9,7 @@ export interface Props {
 export const TextField = ({ title, value, type = "", isRequired = false, onChange }: Props) => {
   return (
     <div>
-      <label className="block text-white text-sm font-medium mb-2" htmlFor="email">
+      <label className="block text-white text-lg font-medium mb-2" htmlFor="email">
         { title }
       </label>
       <input
@@ -18,7 +18,7 @@ export const TextField = ({ title, value, type = "", isRequired = false, onChang
         value={value}
         onChange={(e) => onChange(e.target.value)}
         required={isRequired}
-        className="w-full px-4 py-2 rounded bg-background-200 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-full px-4 py-2 rounded bg-background-200 text-white text-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
     </div>
   )
