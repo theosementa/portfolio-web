@@ -1,6 +1,17 @@
 export const HeaderWithBio = () => {
   return (
-    <div className="flex flex-col md:flex-row md:space-x-32 items-center font-sans text-white">
+    <div className="flex flex-col font-sans text-white gap-6">
+      <p className="font-black text-8xl">Software developer</p>
+      <p className="text-2xl font-medium ">
+        Hello ! Je suis Théo Sementa, software developer principalement sur la parti mobile avec les applications iOS mais également sur la partie web avec React.
+        Actuellement étudiant en master au sein de Metz Numeric School.
+      </p>
+    </div>
+  )
+}
+
+/*
+<div className="flex flex-col md:flex-row md:space-x-32 items-center font-sans text-white">
       <div className="order-2 md:order-1 space-y-8">
         <div className="text-6xl font-bold space-y-2">
           <p>Hi, I am</p>
@@ -22,5 +33,4 @@ export const HeaderWithBio = () => {
         />
       </div>
     </div>
-  )
-}
+*/

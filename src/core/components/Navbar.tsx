@@ -7,41 +7,31 @@ export const Navbar = () => {
   return (
     <nav className="font-sans sticky top-0 bg-background-100 shadow-md z-50 p-8">
       <div className='flex justify-between items-center'>
-        <div>
-          <Link
-            to="/"
-            className='text-2xl font-bold text-white'>
-            <p>Théo Sementa</p>
-          </Link>
-        </div>
+        <Link to="/" >
+          <div className='flex flex-row items-center space-x-4'>
+            <img
+              src="/assets/images/theosementa.jpg"
+              alt="theo's img"
+              className="rounded-full border border-white shadow-lg w-12 h-12"
+            />
+            <p className='text-4xl font-bold text-white'>Théo Sementa</p>
+          </div>
+        </Link>
 
-        <div className='flex space-x-6 items-center'>
-          <Link
-            to="/projects"
-            className="text-lg text-white font-semibold">
+        <div className='flex space-x-6 items-center text-xl text-white font-semibold'>
+          <Link to="/projects" >
             <p>Projets</p>
           </Link>
-          <button
-            onClick={() => navigate("/#skills") }
-            className="text-lg text-white font-semibold"
-          >
+          <button onClick={() => navigate("/#skills")} >
             Compétences
           </button>
-          <button
-            onClick={() => navigate("/#experiences") }
-            className="text-lg text-white font-semibold"
-          >
+          <button onClick={() => navigate("/#experiences")} >
             Experiences
           </button>
-          <button
-            onClick={() =>  { navigate("/#studies"); }}
-            className="text-lg text-white font-semibold"
-          >
+          <button onClick={() => navigate("/#studies")} >
             Études
           </button>
-          <Link
-            to="/contact"
-            className="text-lg text-white font-semibold">
+          <Link to="/contact" >
             <p>Contact</p>
           </Link>
           <LanguagePicker />
