@@ -1,12 +1,12 @@
-import { ExperienceData } from "../../domain/Experience"
-import { SkillData } from "../../domain/Skill"
-import { StudyData } from "../../domain/Study"
+import { TagRow } from "../../core/components/TagRow"
+import { TagsSection } from "../../core/components/TagsSection"
+import { ExperienceData } from "../../domain/models/Experience"
+import { SkillData } from "../../domain/models/Skill"
+import { StudyData } from "../../domain/models/Study"
 import { ExperienceCell } from "../../experience/components/ExperienceCell"
 import { StudyCell } from "../../studies/components/StudyCell"
 import { HeaderWithBio } from "../components/HeaderWithBio"
 import { HomeSectionHeader } from "../components/HomeSectionHeader"
-import { SkillRow } from "../components/SkillRow"
-import { SkillsSection } from "../components/SkillsSection"
 
 export const Home = () => {
   return (
@@ -14,44 +14,52 @@ export const Home = () => {
       <HeaderWithBio />
 
       <div id="skills" className="flex flex-col gap-16">
-        <HomeSectionHeader title="Compétences" subtitle="Les compétences que j'ai acquise durant mon parcours." />
+        <HomeSectionHeader
+          title="Compétences"
+          subtitle="Les compétences que j'ai développées tout au long de mon parcours."
+        />
+
         <div className="flex flex-col gap-8">
-          <SkillsSection title="Compétences principales">
+          <TagsSection title="Stack principale">
             {
               SkillData.mainSkills.map(skill => (
-                <SkillRow key={skill.name} skill={skill} />
+                <TagRow key={skill.name} item={skill} />
               ))
             }
-          </SkillsSection>
+          </TagsSection>
 
-          <SkillsSection title="Frontend">
+          <TagsSection title="Frontend">
             {
               SkillData.frontendSkills.map(skill => (
-                <SkillRow key={skill.name} skill={skill} />
+                <TagRow key={skill.name} item={skill} />
               ))
             }
-          </SkillsSection>
+          </TagsSection>
 
-          <SkillsSection title="Backend">
+          <TagsSection title="Backend">
             {
               SkillData.backendSkills.map(skill => (
-                <SkillRow key={skill.name} skill={skill} />
+                <TagRow key={skill.name} item={skill} />
               ))
             }
-          </SkillsSection>
+          </TagsSection>
 
-          <SkillsSection title="Outils">
+          <TagsSection title="Outils">
             {
               SkillData.tools.map(skill => (
-                <SkillRow key={skill.name} skill={skill} />
+                <TagRow key={skill.name} item={skill} />
               ))
             }
-          </SkillsSection>
+          </TagsSection>
         </div>
       </div>
 
       <div id="experiences" className="flex flex-col gap-16">
-        <HomeSectionHeader title="Expériences" subtitle="Mes expériences professionnelles depuis mon entrée sur le marché du travail." />
+        <HomeSectionHeader
+          title="Expériences"
+          subtitle="Un résumé des rôles et responsabilités que j’ai assumés depuis mes débuts."
+        />
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ExperienceCell experience={ExperienceData.neopixl} />
           <ExperienceCell experience={ExperienceData.efluid} />
@@ -60,7 +68,11 @@ export const Home = () => {
       </div>
 
       <div id="studies" className="flex flex-col gap-16">
-        <HomeSectionHeader title="Études" subtitle="Voici les études supérieures que j'ai éffectué." />
+        <HomeSectionHeader
+          title="Études"
+          subtitle="Un aperçu de mon parcours dans l'enseignement supérieur."
+        />
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <StudyCell study={StudyData.master} />
           <StudyCell study={StudyData.bachelor} />

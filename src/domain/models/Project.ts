@@ -1,3 +1,5 @@
+import { Framework, FrameworkData } from "./Framework"
+import { TechLanguage, TechLanguageData } from "./TechLanguage"
 
 export interface ProjectImages {
   logo: string
@@ -13,8 +15,8 @@ export interface Project {
   description: string
   date: string
   downloadLink: string | undefined
-  languages: string[]
-  frameworks: string[]
+  languages: TechLanguage[]
+  frameworks: Framework[]
 }
 
 export class ProjectData {
@@ -34,8 +36,8 @@ export class ProjectData {
     description: "projects.cashflow.description",
     date: "projects.cashflow.date",
     downloadLink: "https://apps.apple.com/fr/app/cashflow-suivi-des-d%C3%A9penses/id6450913423?platform=iphone",
-    languages: ["Swift"],
-    frameworks: ["SwiftUI", "Charts", "StoreKit", "AppIntent", "CoreData", "CloudKit", "VisionKit", "UserNotifications", "GoogleSignIn", "AuthenticationServices"],
+    languages: [TechLanguageData.swift],
+    frameworks: [FrameworkData.swiftUI, FrameworkData.charts, FrameworkData.storeKit, FrameworkData.appIntents, FrameworkData.coreData, FrameworkData.cloudKit, FrameworkData.visionKit, FrameworkData.userNotifications, FrameworkData.googleSignIn, FrameworkData.authenticationServices],
   }
 
   static cyclo: Project = {
@@ -50,8 +52,8 @@ export class ProjectData {
     description: "projects.cyclo.description",
     date: "projects.cyclo.date",
     downloadLink: "https://github.com/theosementa/Cyclo",
-    languages: ["Swift"],
-    frameworks: ["SwiftUI", "HealthKit", "MapKit", "Charts", "CoreData"],
+    languages: [TechLanguageData.swift],
+    frameworks: [FrameworkData.swiftUI, FrameworkData.healthKit, FrameworkData.mapKit, FrameworkData.charts, FrameworkData.coreData],
   }
 
   static ecoTime: Project = {
@@ -66,8 +68,8 @@ export class ProjectData {
     description: "projects.ecoTime.description",
     date: "projects.ecoTime.date",
     downloadLink: "https://github.com/theosementa/EcoTime",
-    languages: ["Swift"],
-    frameworks: ["SwiftUI", "DeviceActivity", "FamilyControls", "ManagedSettings"],
+    languages: [TechLanguageData.swift],
+    frameworks: [FrameworkData.swiftUI, FrameworkData.deviceActivity, FrameworkData.familyControls, FrameworkData.managedSettings],
   }
 
   static split: Project = {
@@ -82,8 +84,8 @@ export class ProjectData {
     description: "projects.split.description",
     date: "projects.split.date",
     downloadLink: "https://apps.apple.com/fr/app/split-partager-les-d%C3%A9penses/id6504157641",
-    languages: ["Swift"],
-    frameworks: ["SwiftUI", "GoogleSignIn", "AuthenticationServices", "Lottie", "SocketIO", "PhotoUI", "StoreKit"],
+    languages: [TechLanguageData.swift],
+    frameworks: [FrameworkData.swiftUI, FrameworkData.googleSignIn, FrameworkData.authenticationServices, FrameworkData.lottie, FrameworkData.socketIO, FrameworkData.photoUI, FrameworkData.storeKit],
   }
 
   static tyradex: Project = {
@@ -98,8 +100,8 @@ export class ProjectData {
     description: "projects.tyradex.description",
     date: "projects.tyradex.date",
     downloadLink: "https://github.com/theosementa/Tyradex",
-    languages: ["Swift"],
-    frameworks: ["SwiftUI", "TyradexKit"],
+    languages: [TechLanguageData.swift],
+    frameworks: [FrameworkData.swiftUI, FrameworkData.tyradexkit]
   }
 
   static tyradexKit: Project = {
@@ -114,7 +116,7 @@ export class ProjectData {
     description: "projects.tyradexKit.description",
     date: "projects.tyradexKit.date",
     downloadLink: "https://github.com/theosementa/TyradexKit",
-    languages: ["Swift"],
+    languages: [TechLanguageData.swift],
     frameworks: [],
   }
 
@@ -130,7 +132,7 @@ export class ProjectData {
     description: "projects.portfolio.description",
     date: "projects.portfolio.date",
     downloadLink: "https://github.com/theosementa/portfolio",
-    languages: ["TypeScript", "JavaScript", "CSS", "HTML"],
+    languages: [TechLanguageData.typescript, TechLanguageData.javascript, TechLanguageData.html, TechLanguageData.css],
     frameworks: [],
   }
 

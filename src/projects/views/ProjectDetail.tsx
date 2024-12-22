@@ -1,9 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { IoIosDownload } from "react-icons/io";
 import { useParams } from "react-router-dom";
+import { TagRow } from "../../core/components/TagRow";
+import { TagsSection } from "../../core/components/TagsSection";
 import { ActionButton } from "../../core/components/buttons/ActionButton";
-import { ProjectData } from "../../domain/Project";
 import { ActionButtonType } from "../../domain/enum/ActionButtonType";
+import { ProjectData } from "../../domain/models/Project";
 
 export const ProjectDetail = () => {
   const { projectName } = useParams<{ projectName: string }>();
@@ -23,12 +25,12 @@ export const ProjectDetail = () => {
         {project.downloadLink && (
           <div className="max-w-[200px]">
             <ActionButton
-            icon={IoIosDownload}
-            text="Télécharger"
-            isPrimary={true}
-            type={ActionButtonType.medium}
-            onClick={() => window.open(project.downloadLink)}
-          />
+              icon={IoIosDownload}
+              text="Télécharger"
+              isPrimary={true}
+              type={ActionButtonType.medium}
+              onClick={() => window.open(project.downloadLink)}
+            />
           </div>
         )}
       </div>
@@ -47,27 +49,21 @@ export const ProjectDetail = () => {
       <div className="flex flex-col gap-16 w-full">
         {
           project.languages.length > 0 &&
-          <div className="font-sans text-white">
-            <p className="text-4xl font-semibold pb-4">Languages</p>
-            <div className="flex flex-row gap-8 font-medium text-xl">
-              {project.languages.map((language) => (
-                <p>{language}</p>
-              ))
-              }
-            </div>
-          </div>
+          <TagsSection title="Langages">
+            {project.languages.map((language) => (
+              <TagRow key={language.name} item={language} />
+            ))
+            }
+          </TagsSection>
         }
         {
           project.frameworks.length > 0 &&
-          <div className="font-sans text-white">
-            <p className="text-4xl font-semibold pb-4">Frameworks</p>
-            <div className="flex flex-row flex-wrap gap-8 font-medium text-xl">
-              {project.frameworks.map((framework) => (
-                <p>{framework}</p>
-              ))
-              }
-            </div>
-          </div>
+          <TagsSection title="Frameworks">
+            {project.frameworks.map((framework) => (
+              <TagRow key={framework.name} item={framework} />
+            ))
+            }
+          </TagsSection>
         }
       </div>
     </div>
