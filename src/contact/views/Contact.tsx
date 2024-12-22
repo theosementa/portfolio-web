@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { TextArea } from "../../core/components/textfields/TextArea"
 import { TextField } from "../../core/components/textfields/TextField"
 import { HomeSectionHeader } from "../../home/components/HomeSectionHeader"
 import { SocialMediaCell } from "../components/SocialMediaCell"
@@ -12,7 +13,7 @@ export const Contact = () => {
   return (
     <div className="flex flex-col items-center gap-12 w-full">
 
-      <HomeSectionHeader title="Contact" subtitle="N'hésitez pas à me contacter pour tout renseignement ou juste discuter !"/>
+      <HomeSectionHeader title="Contact" subtitle="N'hésitez pas à me contacter pour tout renseignement ou juste discuter !" />
 
       <div className="flex felx-row gap-8">
         <SocialMediaCell icon="/assets/images/social-media/github.svg" name="Github" link="https://github.com/theosementa" />
@@ -27,6 +28,7 @@ export const Contact = () => {
           title="Email"
           value={email}
           type="email"
+          isRequired={true}
           onChange={(email) => {
             setEmail(email)
           }}
@@ -35,6 +37,7 @@ export const Contact = () => {
           title="Name"
           value={name}
           type="text"
+          isRequired={true}
           onChange={(name) => {
             setName(name)
           }}
@@ -43,14 +46,14 @@ export const Contact = () => {
           title="Subject"
           value={subject}
           type="subject"
+          isRequired={true}
           onChange={(subject) => {
             setSubject(subject)
           }}
         />
-        <TextField
-          title="Message"
+        <TextArea
           value={message}
-          type="message"
+          isRequired={true}
           onChange={(message) => {
             setMessage(message)
           }}
