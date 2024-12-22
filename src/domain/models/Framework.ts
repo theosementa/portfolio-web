@@ -50,6 +50,10 @@ export class FrameworkData {
     name: "HealthKit",
     link: "https://developer.apple.com/documentation/healthkit"
   }
+  static weatherkit: Framework = {
+    name: "WeatherKit",
+    link: "https://developer.apple.com/documentation/weatherkit"
+  }
   static mapKit: Framework = {
     name: "MapKit",
     link: "https://developer.apple.com/documentation/mapkit"

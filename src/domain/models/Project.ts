@@ -53,7 +53,7 @@ export class ProjectData {
     date: "projects.cyclo.date",
     downloadLink: "https://github.com/theosementa/Cyclo",
     languages: [TechLanguageData.swift],
-    frameworks: [FrameworkData.swiftUI, FrameworkData.healthKit, FrameworkData.mapKit, FrameworkData.charts, FrameworkData.coreData],
+    frameworks: [FrameworkData.swiftUI, FrameworkData.healthKit, FrameworkData.weatherkit, FrameworkData.mapKit, FrameworkData.charts, FrameworkData.coreData],
   }
 
   static ecoTime: Project = {
