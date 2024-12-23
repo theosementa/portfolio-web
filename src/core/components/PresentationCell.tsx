@@ -19,7 +19,7 @@ export const PresentationCell = ({ item }: Props) => {
       <img src={NetworkPath.baseUrl + item.banner} alt={item.entity} className="rounded-t-2xl" />
       <div className="flex flex-col p-6 gap-8 h-full">
         <div className="flex flex-col gap-6 h-full">
-          <p className="font-semibold text-3xl">{t(item.title)}</p>
+          <p className="font-semibold text-2xl">{t(item.title)}</p>
           <p className="font-medium text-xl">{t(item.description)}</p>
         </div>
 

@@ -12,13 +12,13 @@ export const Navbar = () => {
             <img
               src="/assets/images/theosementa.jpg"
               alt="theo's img"
-              className="rounded-full border border-white shadow-lg w-12 h-12"
+              className="rounded-full border border-white shadow-lg w-10 h-10"
             />
-            <p className='text-4xl font-bold text-white'>Théo Sementa</p>
+            <p className='text-2xl font-bold text-white'>Théo Sementa</p>
           </div>
         </Link>
 
-        <div className='flex space-x-6 items-center text-xl text-white font-semibold'>
+        <div className='flex space-x-6 items-center text-lg text-white font-semibold'>
           <Link to="/projects" >
             <p>Projets</p>
           </Link>

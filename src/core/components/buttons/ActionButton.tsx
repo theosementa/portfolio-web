@@ -28,7 +28,7 @@ export const ActionButton = ({ icon: Icon, text, isPrimary, type = ActionButtonT
       <p className={`
         font-semibold font-sans 
         ${isPrimary ? "text-white" : "text-blue-600"}
-        ${type == ActionButtonType.medium ? "text-lg" : ""}
+        ${type == ActionButtonType.medium ? "text-lg" : "text-base"}
         `}>{text}</p>
     </button>
   );

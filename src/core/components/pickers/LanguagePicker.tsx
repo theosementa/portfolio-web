@@ -27,7 +27,7 @@ export const LanguagePicker = () => {
     <div className='font-sans'>
       <button
         onClick={toggleDropdownVisibility}
-        className="flex flex-row items-center text-xl text-white font-semibold bg-background-200 py-2 px-4 rounded-lg"
+        className="flex flex-row items-center text-lg text-white font-semibold bg-background-200 py-2 px-4 rounded-lg"
       >
         <img src={i18n.language === "fr" ? flagFR : flagEN} alt="French flag" className="h-5 w-5 mr-2" />
         {i18n.language === "fr" ? "Français" : "English"}

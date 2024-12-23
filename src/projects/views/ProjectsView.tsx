@@ -10,7 +10,7 @@ export const ProjectsView = () => {
         title="Projets"
         subtitle="Les projets personnels que j'ai réalisés pour renforcer mes compétences."
       />
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {ProjectData.projects.map((project, index) => (
         <motion.div
           key={project.name}

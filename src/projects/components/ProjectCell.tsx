@@ -3,7 +3,7 @@ import { IoIosDownload } from "react-icons/io";
 import { useNavigate } from "react-router";
 import { ActionButton } from "../../core/components/buttons/ActionButton";
 import { DateRow } from "../../core/components/DateRow";
-import { Project } from "../../domain/Project";
+import { Project } from "../../domain/models/Project";
 
 interface Props {
   project: Project
@@ -22,9 +22,9 @@ export const ProjectCell = ({ project }: Props) => {
       />
 
       <div className="text-white p-4 space-y-4 flex-grow pb-8">
-        <p className="font-sans text-4xl font-semibold">{project.name}</p>
-        <p className="font-sans text-2xl font-medium">{t(project.subtitle)}</p>
-        <p className="font-sans text-xl text-gray-400 font-medium">{t(project.presentation)}</p>
+        <p className="font-sans text-3xl font-semibold">{project.name}</p>
+        <p className="font-sans text-xl font-medium">{t(project.subtitle)}</p>
+        <p className="font-sans text-lg text-gray-400 font-medium">{t(project.presentation)}</p>
       </div>
 
       <div className="px-4 pb-4 space-y-4">
