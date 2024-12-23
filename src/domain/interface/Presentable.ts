@@ -7,4 +7,5 @@ export interface Presentable {
   endDate: string;
   location: string;
   website: string;
+  type: string;
 }

@@ -4,4 +4,8 @@ export class NetworkPath {
   static Experience = class {
     static base: string = "/experience";
   };
+
+  static Study = class {
+    static base: string = "/study";
+  };
 }

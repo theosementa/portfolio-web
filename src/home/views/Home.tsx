@@ -1,15 +1,14 @@
+import { PresentationCell } from "../../core/components/PresentationCell"
 import { TagRow } from "../../core/components/TagRow"
 import { TagsSection } from "../../core/components/TagsSection"
 import { SkillData } from "../../domain/models/Skill"
-import { StudyData } from "../../domain/models/Study"
-import { ExperienceCell } from "../../experience/components/ExperienceCell"
-import { StudyCell } from "../../studies/components/StudyCell"
 import { HeaderWithBio } from "../components/HeaderWithBio"
 import { HomeSectionHeader } from "../components/HomeSectionHeader"
 import { HomeViewModel } from "../viewmodels/HomeViewModel"
 
 export const Home = () => {
   const experiences = HomeViewModel.shared.experiences
+  const studies = HomeViewModel.shared.studies
 
   return (
     <div className="flex flex-col gap-32">
@@ -65,7 +64,7 @@ export const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {
             experiences.map((experience) => (
-              <ExperienceCell key={experience.title} experience={experience} />
+              <PresentationCell key={experience.title} item={experience} />
             ))
           }
         </div>
@@ -78,9 +77,11 @@ export const Home = () => {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <StudyCell study={StudyData.master} />
-          <StudyCell study={StudyData.bachelor} />
-          <StudyCell study={StudyData.bts} />
+          {
+            studies.map((study) => (
+              <PresentationCell key={study.title} item={study} />
+            ))
+          }
         </div>
       </div>
     </div>
