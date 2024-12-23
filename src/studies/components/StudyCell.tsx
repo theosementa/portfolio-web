@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next"
 import { HiLocationMarker } from "react-icons/hi"
 import { IoCalendar, IoSchoolSharp } from "react-icons/io5"
 import { TbWorld } from "react-icons/tb"
-import { Study } from "../../domain/Study"
+import { Study } from "../../domain/models/Study"
 
 interface Props {
   study: Study
@@ -23,7 +23,7 @@ export const StudyCell = ({ study }: Props) => {
         <div className="flex flex-col gap-6">
           <div className="flex flex-row gap-4 items-center">
             <IoSchoolSharp className="w-6 h-6" />
-            <p className="font-medium text-xl">{t(study.school)}</p>
+            <p className="font-medium text-xl">{t(study.entity)}</p>
           </div>
           <div className="flex flex-row gap-4 items-center">
             <IoCalendar className="w-6 h-6" />

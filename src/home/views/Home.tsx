@@ -1,14 +1,16 @@
 import { TagRow } from "../../core/components/TagRow"
 import { TagsSection } from "../../core/components/TagsSection"
-import { ExperienceData } from "../../domain/models/Experience"
 import { SkillData } from "../../domain/models/Skill"
 import { StudyData } from "../../domain/models/Study"
 import { ExperienceCell } from "../../experience/components/ExperienceCell"
 import { StudyCell } from "../../studies/components/StudyCell"
 import { HeaderWithBio } from "../components/HeaderWithBio"
 import { HomeSectionHeader } from "../components/HomeSectionHeader"
+import { HomeViewModel } from "../viewmodels/HomeViewModel"
 
 export const Home = () => {
+  const experiences = HomeViewModel.shared.experiences
+
   return (
     <div className="flex flex-col gap-32">
       <HeaderWithBio />
@@ -61,9 +63,11 @@ export const Home = () => {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <ExperienceCell experience={ExperienceData.neopixl} />
-          <ExperienceCell experience={ExperienceData.efluid} />
-          <ExperienceCell experience={ExperienceData.antares} />
+          {
+            experiences.map((experience) => (
+              <ExperienceCell key={experience.title} experience={experience} />
+            ))
+          }
         </div>
       </div>
 

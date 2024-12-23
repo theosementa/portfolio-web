@@ -2,7 +2,8 @@ import { useTranslation } from "react-i18next"
 import { HiLocationMarker } from "react-icons/hi"
 import { IoCalendar, IoPerson } from "react-icons/io5"
 import { TbWorld } from "react-icons/tb"
-import { Experience } from "../../domain/Experience"
+import { NetworkPath } from "../../core/network/NetworkPath"
+import { Experience } from "../../domain/models/Experience"
 
 interface Props {
   experience: Experience
@@ -13,10 +14,10 @@ export const ExperienceCell = ({ experience }: Props) => {
 
   return (
     <div className="flex flex-col bg-background-100 rounded-2xl font-sans text-white">
-      <img src={experience.banner} alt={experience.company} className="rounded-t-2xl" />
+      <img src={NetworkPath.baseUrl + experience.banner} alt={experience.entity} className="rounded-t-2xl" />
       <div className="flex flex-col p-6 gap-8 h-full">
         <div className="flex flex-col gap-6 h-full">
-          <p className="font-semibold text-3xl">{experience.company}</p>
+          <p className="font-semibold text-3xl">{experience.entity}</p>
           <p className="font-medium text-xl">{t(experience.description)}</p>
         </div>
 
