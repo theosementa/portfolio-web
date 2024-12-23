@@ -1,4 +1,4 @@
-import { Taggable } from "./interface/Taggable"
+import { Taggable } from "../interface/Taggable"
 
 export interface Skill extends Taggable {
   logo: string

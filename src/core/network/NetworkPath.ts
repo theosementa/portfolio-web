@@ -8,4 +8,8 @@ export class NetworkPath {
   static Study = class {
     static base: string = "/study";
   };
+
+  static SocialMedia = class {
+    static base: string = "/social-media";
+  };
 }

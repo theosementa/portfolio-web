@@ -1,7 +1,7 @@
 import { Presentable } from "../interface/Presentable";
 
 export class Experience implements Presentable { 
-  readonly type = 'Experience';
+  type: string = 'Experience';
   
   constructor(
     public entity: string,
