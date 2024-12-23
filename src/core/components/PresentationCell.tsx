@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next"
+import { FaBuilding } from "react-icons/fa"
 import { HiLocationMarker } from "react-icons/hi"
-import { IoCalendar, IoPerson, IoSchoolSharp } from "react-icons/io5"
+import { IoCalendar, IoSchoolSharp } from "react-icons/io5"
 import { TbWorld } from "react-icons/tb"
 import { Presentable } from "../../domain/interface/Presentable"
 import { NetworkPath } from "../network/NetworkPath"
@@ -18,7 +19,7 @@ export const PresentationCell = ({ item }: Props) => {
       <img src={NetworkPath.baseUrl + item.banner} alt={item.entity} className="rounded-t-2xl" />
       <div className="flex flex-col p-6 gap-8 h-full">
         <div className="flex flex-col gap-6 h-full">
-          <p className="font-semibold text-3xl">{isExperience ? item.entity : t(item.title)}</p>
+          <p className="font-semibold text-3xl">{t(item.title)}</p>
           <p className="font-medium text-xl">{t(item.description)}</p>
         </div>
 
@@ -26,14 +27,10 @@ export const PresentationCell = ({ item }: Props) => {
           <div className="flex flex-row gap-4 items-center">
             {
               isExperience
-                ? <IoPerson className="w-6 h-6" />
+                ? <FaBuilding className="w-6 h-6" />
                 : <IoSchoolSharp className="w-6 h-6" />
             }
-            {
-              isExperience
-                ? <p className="font-medium text-xl">{t(item.title)}</p>
-                : <p className="font-medium text-xl">{t(item.entity)}</p>
-            }
+            <p className="font-medium text-xl">{t(item.entity)}</p>
           </div>
           <div className="flex flex-row gap-4 items-center">
             <IoCalendar className="w-6 h-6" />

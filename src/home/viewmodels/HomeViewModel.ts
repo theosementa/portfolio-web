@@ -12,8 +12,13 @@ export class HomeViewModel {
 
   constructor() {
     makeAutoObservable(this)
-    this.fetchExperiences()
-    this.fetchStudies()
+  }
+
+  async init() {
+    await Promise.all([
+      this.fetchExperiences(),
+      this.fetchStudies()
+    ])
   }
 
   async fetchExperiences() {

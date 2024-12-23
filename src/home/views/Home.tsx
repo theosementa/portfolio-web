@@ -1,3 +1,5 @@
+import { observer } from "mobx-react-lite"
+import { useEffect } from "react"
 import { PresentationCell } from "../../core/components/PresentationCell"
 import { TagRow } from "../../core/components/TagRow"
 import { TagsSection } from "../../core/components/TagsSection"
@@ -6,10 +8,14 @@ import { HeaderWithBio } from "../components/HeaderWithBio"
 import { HomeSectionHeader } from "../components/HomeSectionHeader"
 import { HomeViewModel } from "../viewmodels/HomeViewModel"
 
-export const Home = () => {
+export const Home = observer(() => {
   const experiences = HomeViewModel.shared.experiences
   const studies = HomeViewModel.shared.studies
 
+  useEffect(() => {
+    HomeViewModel.shared.init()
+  }, [])
+  
   return (
     <div className="flex flex-col gap-32">
       <HeaderWithBio />
@@ -86,4 +92,4 @@ export const Home = () => {
       </div>
     </div>
   )
-}
+})
