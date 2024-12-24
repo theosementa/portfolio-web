@@ -1,5 +1,6 @@
 import { observer } from "mobx-react-lite"
 import { useEffect } from "react"
+import { useTranslation } from "react-i18next"
 import { PresentationCell } from "../../core/components/PresentationCell"
 import { TagRow } from "../../core/components/TagRow"
 import { TagsSection } from "../../core/components/TagsSection"
@@ -13,6 +14,7 @@ import { HomeSectionHeader } from "../components/HomeSectionHeader"
 import { HomeViewModel } from "../viewmodels/HomeViewModel"
 
 export const Home = observer(() => {
+  const { t } = useTranslation()
   const experiences = ExperienceStore.shared.experiences
   const studies = StudyStore.shared.studies
 
@@ -27,12 +29,12 @@ export const Home = observer(() => {
 
       <div id="skills" className="flex flex-col gap-16 px-12">
         <HomeSectionHeader
-          title="Compétences"
-          subtitle="Les compétences que j'ai développées tout au long de mon parcours."
+          title={t("skills.title")}
+          subtitle={t("skills.subtitle")}
         />
 
         <div className="flex flex-col gap-12 bg-background-100 rounded-2xl p-6">
-          <TagsSection title="Stack principale">
+          <TagsSection title={t("skills.stack.main")}>
             {
               SkillData.mainSkills.map(skill => (
                 <TagRow key={skill.name} item={skill} />
@@ -56,7 +58,7 @@ export const Home = observer(() => {
             }
           </TagsSection>
 
-          <TagsSection title="Outils">
+          <TagsSection title={t("skills.stack.tools")}>
             {
               SkillData.tools.map(skill => (
                 <TagRow key={skill.name} item={skill} />
@@ -68,8 +70,8 @@ export const Home = observer(() => {
 
       <div id="experiences" className="flex flex-col gap-16 px-12">
         <HomeSectionHeader
-          title="Expériences"
-          subtitle="Un résumé des rôles et responsabilités que j’ai assumés depuis mes débuts."
+          title={t("experiences.title")}
+          subtitle={t("experiences.subtitle")}
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -83,8 +85,8 @@ export const Home = observer(() => {
 
       <div id="studies" className="flex flex-col gap-16 px-12">
         <HomeSectionHeader
-          title="Études"
-          subtitle="Un aperçu de mon parcours dans l'enseignement supérieur."
+          title={t("studies.title")}
+          subtitle={t("studies.subtitle")}
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

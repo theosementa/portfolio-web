@@ -6,7 +6,7 @@ export const FooterView = () => {
 
   return (
     <div className="flex flex-col bg-background-100 p-12 gap-8 items-center justify-center">
-      <div className="flex flex-row gap-12">
+      <div className="grid grid-cols-3 sm:grid-cols-6 gap-12">
         {
           socialMedias.map((socialMedia) => (
             <div className="group relative inline-block">
@@ -28,7 +28,7 @@ export const FooterView = () => {
           ))
         }
       </div>
-      <p className="font-sans font-medium text-white">© 2024 Sementa Théo. All rights reserved.</p>
+      <p className="font-sans font-medium text-white text-center">© 2024 Sementa Théo. All rights reserved.</p>
     </div>
   )
 }

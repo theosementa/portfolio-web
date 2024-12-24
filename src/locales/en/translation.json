@@ -1,5 +1,10 @@
 {
+  "theo": {
+    "bio": "Hello, I'm Théo Sementa, a software developer specialising in mobile development, with expertise in iOS (Swift/SwiftUI) and a growing interest in Kotlin Multiplatform and Jetpack Compose. I also work on web projects with React and NestJS. I'm currently doing a Masters at Metz Numeric School to hone my skills and broaden my expertise."
+  },
   "projects": {
+    "title": "Projects",
+    "subtitle": "The personal projects I have carried out to enhance my skills.",
     "cashflow": {
       "subtitle": "Expense tracking",
       "presentation": "CashFlow is an iOS application that helps you manage your expenses and money in general.",
@@ -43,7 +48,17 @@
       "date": "December 2024 - Present"
     }
   },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "The skills I have developed throughout my career.",
+    "stack": {
+      "main": "Main stack",
+      "tools": "Tools"
+    }
+  },
   "experiences": {
+    "title": "Experiences",
+    "subtitle": "A summary of the roles and responsibilities I've taken on since I started.",
     "neopixl": {
       "title": "iOS Developer",
       "description": "Neoxipl are experts to support and guide you in the creation of your mobile app from A to Z.",
@@ -64,6 +79,8 @@
     }
   },
   "studies": {
+    "title": "Studies",
+    "subtitle": "An overview of my career in higher education.",
     "master": {
       "title": "Master's degree in Management and Computer Science",
       "startDate": "October 2024",
