@@ -99,5 +99,15 @@
       "endDate": "Septembre 2023",
       "description": "Le BTS en administration des systèmes et réseaux est un programme de deux ans qui permet aux étudiants d'acquérir les compétences nécessaires pour travailler en tant qu'administrateurs de systèmes et de réseaux."
     }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "N'hésitez pas à me contacter pour toute information ou pour discuter !"
+  },
+  "word": {
+    "download": "Télécharger",
+    "seeMore": "Voir plus",
+    "private": "Privé",
+    "programmingLanguages": "Langages de programmation"
   }
 }

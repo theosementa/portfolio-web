@@ -1,10 +1,12 @@
 import { observer } from "mobx-react-lite"
 import { useEffect } from "react"
+import { useTranslation } from "react-i18next"
 import { SocialMediaStore } from "../../core/network/social-media/SocialMediaStore"
 import { HomeSectionHeader } from "../../home/components/HomeSectionHeader"
 import { SocialMediaCell } from "../components/SocialMediaCell"
 
 export const Contact = observer(() => {
+  const { t } = useTranslation()
   const socialMedias = SocialMediaStore.shared.socialMedias;
 
   useEffect(() => {
@@ -14,8 +16,8 @@ export const Contact = observer(() => {
   return (
     <div className="flex flex-col items-center gap-12 w-full p-12">
       <HomeSectionHeader
-        title="Contact"
-        subtitle="N'hésitez pas à me contacter pour toute information ou pour discuter !"
+        title={t("contact.title")}
+        subtitle={t("contact.subtitle")}
       />
 
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">

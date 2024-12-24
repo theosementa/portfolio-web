@@ -41,13 +41,13 @@ export const ProjectCell = ({ project }: Props) => {
           {project.downloadLink && (
             <ActionButton
               icon={IoIosDownload}
-              text="Télécharger"
+              text={t("word.download")}
               isPrimary={true}
               onClick={() => window.open(project.downloadLink)}
             />
           )}
           <ActionButton
-            text="Voir plus"
+            text={t("word.seeMore")}
             isPrimary={false}
             onClick={() => navigate(`/projects/${project.name.toLowerCase()}`)}
           />

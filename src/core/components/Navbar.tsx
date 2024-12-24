@@ -1,8 +1,10 @@
+import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
 import { LanguagePicker } from './pickers/LanguagePicker';
 
 export const Navbar = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation()
 
   return (
     <nav className="font-sans sticky top-0 bg-background-100 shadow-md z-50 p-8">
@@ -20,19 +22,19 @@ export const Navbar = () => {
 
         <div className='flex space-x-6 items-center text-lg text-white font-semibold'>
           <Link to="/projects" >
-            <p>Projets</p>
+            <p>{t("projects.title")}</p>
           </Link>
           <button onClick={() => navigate("/#skills")} >
-            Compétences
+            {t("skills.title")}
           </button>
           <button onClick={() => navigate("/#experiences")} >
-            Experiences
+            {t("experiences.title")}
           </button>
           <button onClick={() => navigate("/#studies")} >
-            Études
+            {t("studies.title")}
           </button>
           <Link to="/contact" >
-            <p>Contact</p>
+            <p>{t("contact.title")}</p>
           </Link>
           <LanguagePicker />
         </div>

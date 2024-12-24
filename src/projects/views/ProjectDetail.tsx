@@ -26,7 +26,7 @@ export const ProjectDetail = () => {
           <div className="max-w-[200px]">
             <ActionButton
               icon={IoIosDownload}
-              text="Télécharger"
+              text={t("word.download")}
               isPrimary={true}
               type={ActionButtonType.medium}
               onClick={() => window.open(project.downloadLink)}
@@ -40,7 +40,7 @@ export const ProjectDetail = () => {
         <div className="grid grid-cols-3 gap-4">
           {
             project.images.images.map((image) => (
-              <img src={image} alt="zfzf" className="w-full bg-background-100 rounded-3xl p-16" />
+              <img src={image} alt="" className="w-full bg-background-100 rounded-3xl p-16" />
             ))
           }
         </div>
@@ -49,7 +49,7 @@ export const ProjectDetail = () => {
       <div className="flex flex-col gap-16 w-full">
         {
           project.languages.length > 0 &&
-          <TagsSection title="Langages">
+          <TagsSection title={t("word.programmingLanguages")}>
             {project.languages.map((language) => (
               <TagRow key={language.name} item={language} />
             ))

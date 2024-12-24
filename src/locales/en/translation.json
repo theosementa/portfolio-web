@@ -99,5 +99,15 @@
       "endDate": "September 2023",
       "description": "The BTS in System and Network Administration is a two-year program that provides students with the skills and knowledge needed to work as system and network administrators."
     }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Please do not hesitate to contact me for any information or to discuss your requirements!"
+  },
+  "word": {
+    "download": "Download",
+    "seeMore": "See more",
+    "private": "Private",
+    "programmingLanguages": "Programming languages"
   }
 }
