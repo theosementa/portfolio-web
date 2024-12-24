@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <ScrollToAnchor />
       <Navbar />
-      <div className="p-12">
+      <div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<ProjectsView />}></Route>

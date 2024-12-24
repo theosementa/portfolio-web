@@ -1,14 +1,14 @@
 import { observer } from "mobx-react-lite"
 import { useEffect } from "react"
+import { SocialMediaStore } from "../../core/network/SocialMedia/SocialMediaStore"
 import { HomeSectionHeader } from "../../home/components/HomeSectionHeader"
 import { SocialMediaCell } from "../components/SocialMediaCell"
-import { ContactViewModel } from "../viewmodels/ContactViewModel"
 
 export const Contact = observer(() => {
-  const socialMedias = ContactViewModel.shared.socialMedias;
+  const socialMedias = SocialMediaStore.shared.socialMedias;
 
   useEffect(() => {
-    ContactViewModel.shared.init()
+    SocialMediaStore.shared.init()
   }, [])
 
   return (

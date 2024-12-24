@@ -3,7 +3,9 @@ import { useEffect } from "react"
 import { PresentationCell } from "../../core/components/PresentationCell"
 import { TagRow } from "../../core/components/TagRow"
 import { TagsSection } from "../../core/components/TagsSection"
+import { SocialMediaStore } from "../../core/network/SocialMedia/SocialMediaStore"
 import { SkillData } from "../../domain/models/Skill"
+import { FooterView } from "../components/FooterView"
 import { HeaderWithBio } from "../components/HeaderWithBio"
 import { HomeSectionHeader } from "../components/HomeSectionHeader"
 import { HomeViewModel } from "../viewmodels/HomeViewModel"
@@ -14,13 +16,14 @@ export const Home = observer(() => {
 
   useEffect(() => {
     HomeViewModel.shared.init()
+    SocialMediaStore.shared.init()
   }, [])
   
   return (
     <div className="flex flex-col gap-32">
       <HeaderWithBio />
 
-      <div id="skills" className="flex flex-col gap-16">
+      <div id="skills" className="flex flex-col gap-16 px-12">
         <HomeSectionHeader
           title="Compétences"
           subtitle="Les compétences que j'ai développées tout au long de mon parcours."
@@ -61,7 +64,7 @@ export const Home = observer(() => {
         </div>
       </div>
 
-      <div id="experiences" className="flex flex-col gap-16">
+      <div id="experiences" className="flex flex-col gap-16 px-12">
         <HomeSectionHeader
           title="Expériences"
           subtitle="Un résumé des rôles et responsabilités que j’ai assumés depuis mes débuts."
@@ -76,7 +79,7 @@ export const Home = observer(() => {
         </div>
       </div>
 
-      <div id="studies" className="flex flex-col gap-16">
+      <div id="studies" className="flex flex-col gap-16 px-12">
         <HomeSectionHeader
           title="Études"
           subtitle="Un aperçu de mon parcours dans l'enseignement supérieur."
@@ -90,6 +93,8 @@ export const Home = observer(() => {
           }
         </div>
       </div>
+
+      <FooterView />
     </div>
   )
 })

@@ -1,6 +1,6 @@
 export const HeaderWithBio = () => {
   return (
-    <div className="flex flex-col font-sans text-white gap-6">
+    <div className="flex flex-col font-sans text-white gap-6 px-12 pt-12">
       <p className="font-black text-6xl">Software developer</p>
       <p className="text-xl font-medium ">
       Hello ! Je suis Théo Sementa, développeur logiciel spécialisé dans le développement mobile avec une expertise en iOS (Swift/SwiftUI)
