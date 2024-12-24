@@ -3,7 +3,9 @@ import { useEffect } from "react"
 import { PresentationCell } from "../../core/components/PresentationCell"
 import { TagRow } from "../../core/components/TagRow"
 import { TagsSection } from "../../core/components/TagsSection"
-import { SocialMediaStore } from "../../core/network/SocialMedia/SocialMediaStore"
+import { ExperienceStore } from "../../core/network/experience/ExperienceStore"
+import { SocialMediaStore } from "../../core/network/social-media/SocialMediaStore"
+import { StudyStore } from "../../core/network/study/StudyStore"
 import { SkillData } from "../../domain/models/Skill"
 import { FooterView } from "../components/FooterView"
 import { HeaderWithBio } from "../components/HeaderWithBio"
@@ -11,8 +13,8 @@ import { HomeSectionHeader } from "../components/HomeSectionHeader"
 import { HomeViewModel } from "../viewmodels/HomeViewModel"
 
 export const Home = observer(() => {
-  const experiences = HomeViewModel.shared.experiences
-  const studies = HomeViewModel.shared.studies
+  const experiences = ExperienceStore.shared.experiences
+  const studies = StudyStore.shared.studies
 
   useEffect(() => {
     HomeViewModel.shared.init()

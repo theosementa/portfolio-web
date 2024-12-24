@@ -1,6 +1,6 @@
 import axios from "axios";
-import { Experience } from "../../domain/models/Experience";
-import { NetworkPath } from "./NetworkPath";
+import { Experience } from "../../../domain/models/Experience";
+import { NetworkPath } from "../NetworkPath";
 
 export class ExperienceService {
 

@@ -1,19 +1,19 @@
 import { motion } from "framer-motion"
 import { observer } from "mobx-react-lite"
 import { useEffect } from "react"
+import { ProjectStore } from "../../core/network/project/ProjectStore"
 import { HomeSectionHeader } from "../../home/components/HomeSectionHeader"
 import { ProjectCell } from "../components/ProjectCell"
-import { ProjectViewModel } from "../viewmodels/ProjectViewModel"
 
 export const ProjectsView = observer(() => {
-  const projects = ProjectViewModel.shared.projects
+  const projects = ProjectStore.shared.projects
 
   useEffect(() => {
-    ProjectViewModel.shared.init()
+    ProjectStore.shared.init()
   }, [])
 
   return (
-    <div className="flex flex-col gap-16">
+    <div className="flex flex-col gap-16 p-12">
       <HomeSectionHeader
         title="Projets"
         subtitle="Les projets personnels que j'ai réalisés pour renforcer mes compétences."

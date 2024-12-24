@@ -4,12 +4,12 @@ import { useParams } from "react-router-dom";
 import { TagRow } from "../../core/components/TagRow";
 import { TagsSection } from "../../core/components/TagsSection";
 import { ActionButton } from "../../core/components/buttons/ActionButton";
+import { ProjectStore } from "../../core/network/project/ProjectStore";
 import { ActionButtonType } from "../../domain/enum/ActionButtonType";
-import { ProjectViewModel } from "../viewmodels/ProjectViewModel";
 
 export const ProjectDetail = () => {
   const { projectName } = useParams<{ projectName: string }>();
-  const project = ProjectViewModel.shared.projects.find((project) => project.name.toLowerCase() === projectName);
+  const project = ProjectStore.shared.projects.find((project) => project.name.toLowerCase() === projectName);
 
   const { t } = useTranslation();
 
@@ -18,7 +18,7 @@ export const ProjectDetail = () => {
   }
 
   return (
-    <div className="flex flex-col w-full px-24 gap-16">
+    <div className="flex flex-col w-full px-24 gap-16 py-12">
 
       <div className="flex flex-col gap-8">
         <p className="font-sans text-6xl font-bold text-white" >{project.name} - {t(project.subtitle)}</p>

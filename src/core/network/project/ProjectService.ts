@@ -1,6 +1,6 @@
 import axios from "axios";
-import { Project } from "../../domain/models/Project";
-import { NetworkPath } from "./NetworkPath";
+import { Project } from "../../../domain/models/Project";
+import { NetworkPath } from "../NetworkPath";
 
 export class ProjectService {
 

@@ -1,6 +1,6 @@
 import axios from "axios";
-import { Study } from "../../domain/models/Study";
-import { NetworkPath } from "./NetworkPath";
+import { Study } from "../../../domain/models/Study";
+import { NetworkPath } from "../NetworkPath";
 
 export class StudyService {
   

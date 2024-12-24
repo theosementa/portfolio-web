@@ -1,5 +1,5 @@
 import { NetworkPath } from "../../core/network/NetworkPath";
-import { SocialMediaStore } from "../../core/network/SocialMedia/SocialMediaStore";
+import { SocialMediaStore } from "../../core/network/social-media/SocialMediaStore";
 
 export const FooterView = () => {
   const socialMedias = SocialMediaStore.shared.socialMedias;

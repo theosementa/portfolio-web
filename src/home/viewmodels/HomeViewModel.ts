@@ -1,14 +1,9 @@
 import { makeAutoObservable } from "mobx"
-import { ExperienceService } from "../../core/network/ExperienceService"
-import { StudyService } from "../../core/network/StudyService"
-import { Experience } from "../../domain/models/Experience"
-import { Study } from "../../domain/models/Study"
+import { ExperienceStore } from "../../core/network/experience/ExperienceStore"
+import { StudyStore } from "../../core/network/study/StudyStore"
 
 export class HomeViewModel {
   static shared = new HomeViewModel()
-
-  experiences: Experience[] = []
-  studies: Study[] = []
 
   constructor() {
     makeAutoObservable(this)
@@ -16,27 +11,9 @@ export class HomeViewModel {
 
   async init() {
     await Promise.all([
-      this.fetchExperiences(),
-      this.fetchStudies()
+      ExperienceStore.shared.init(),
+      StudyStore.shared.init()
     ])
-  }
-
-  async fetchExperiences() {
-    const experienceService = new ExperienceService();
-    try {
-      this.experiences = await experienceService.fetchExperiences();
-    } catch (error) {
-      console.error("Failed to fetch experiences:", error);
-    }
-  }
-
-  async fetchStudies() {
-    const studyService = new StudyService();
-    try {
-      this.studies = await studyService.fetchStudies();
-    } catch (error) {
-      console.error("Failed to fetch studies:", error);
-    }
   }
   
 }

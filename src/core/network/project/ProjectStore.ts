@@ -1,9 +1,9 @@
 import { makeAutoObservable } from "mobx";
-import { ProjectService } from "../../core/network/ProjectService";
-import { Project } from "../../domain/models/Project";
+import { Project } from "../../../domain/models/Project";
+import { ProjectService } from "./ProjectService";
 
-export class ProjectViewModel {
-  static shared = new ProjectViewModel()
+export class ProjectStore {
+  static shared = new ProjectStore()
 
   projects: Project[] = []
 

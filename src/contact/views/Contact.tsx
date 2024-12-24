@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite"
 import { useEffect } from "react"
-import { SocialMediaStore } from "../../core/network/SocialMedia/SocialMediaStore"
+import { SocialMediaStore } from "../../core/network/social-media/SocialMediaStore"
 import { HomeSectionHeader } from "../../home/components/HomeSectionHeader"
 import { SocialMediaCell } from "../components/SocialMediaCell"
 
@@ -12,7 +12,7 @@ export const Contact = observer(() => {
   }, [])
 
   return (
-    <div className="flex flex-col items-center gap-12 w-full">
+    <div className="flex flex-col items-center gap-12 w-full p-12">
       <HomeSectionHeader
         title="Contact"
         subtitle="N'hésitez pas à me contacter pour toute information ou pour discuter !"
