@@ -26,7 +26,7 @@ export const Home = observer(() => {
           subtitle="Les compétences que j'ai développées tout au long de mon parcours."
         />
 
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-12 bg-background-100 rounded-2xl p-6">
           <TagsSection title="Stack principale">
             {
               SkillData.mainSkills.map(skill => (
