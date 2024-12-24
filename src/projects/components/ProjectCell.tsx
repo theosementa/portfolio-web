@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import { ActionButton } from "../../core/components/buttons/ActionButton";
 import { DateRow } from "../../core/components/DateRow";
 import { Project } from "../../domain/models/Project";
+import { ProjectStatusRow } from "./ProjectStatusRow";
 
 interface Props {
   project: Project
@@ -15,11 +16,17 @@ export const ProjectCell = ({ project }: Props) => {
   
   return (
     <div className="bg-background-100 rounded-2xl border-2 border-background-200 flex flex-col h-full">
+      <div className="relative">
       <img
         src={project.images.logo}
         alt="project logo"
         className="rounded-t-2xl w-full h-auto"
       />
+      <div className="absolute top-4 right-4">
+        <ProjectStatusRow status={project.status} />
+      </div>
+
+    </div>
 
       <div className="text-white p-4 space-y-4 flex-grow pb-8">
         <p className="font-sans text-3xl font-semibold">{project.name}</p>

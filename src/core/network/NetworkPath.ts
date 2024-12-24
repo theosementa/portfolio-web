@@ -12,4 +12,8 @@ export class NetworkPath {
   static SocialMedia = class {
     static base: string = "/social-media";
   };
+
+  static Project = class {
+    static base: string = "/project";
+  };
 }

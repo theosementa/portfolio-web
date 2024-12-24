@@ -5,11 +5,11 @@ import { TagRow } from "../../core/components/TagRow";
 import { TagsSection } from "../../core/components/TagsSection";
 import { ActionButton } from "../../core/components/buttons/ActionButton";
 import { ActionButtonType } from "../../domain/enum/ActionButtonType";
-import { ProjectData } from "../../domain/models/Project";
+import { ProjectViewModel } from "../viewmodels/ProjectViewModel";
 
 export const ProjectDetail = () => {
   const { projectName } = useParams<{ projectName: string }>();
-  const project = ProjectData.projects.find((project) => project.name.toLowerCase() === projectName);
+  const project = ProjectViewModel.shared.projects.find((project) => project.name.toLowerCase() === projectName);
 
   const { t } = useTranslation();
 

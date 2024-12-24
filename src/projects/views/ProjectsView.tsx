@@ -1,9 +1,16 @@
 import { motion } from "framer-motion"
-import { ProjectData } from "../../domain/models/Project"
+import { useEffect } from "react"
 import { HomeSectionHeader } from "../../home/components/HomeSectionHeader"
 import { ProjectCell } from "../components/ProjectCell"
+import { ProjectViewModel } from "../viewmodels/ProjectViewModel"
 
 export const ProjectsView = () => {
+  const projects = ProjectViewModel.shared.projects
+
+  useEffect(() => {
+    ProjectViewModel.shared.init()
+  }, [])
+
   return (
     <div className="flex flex-col gap-16">
       <HomeSectionHeader
@@ -11,7 +18,7 @@ export const ProjectsView = () => {
         subtitle="Les projets personnels que j'ai réalisés pour renforcer mes compétences."
       />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-      {ProjectData.projects.map((project, index) => (
+      {projects.map((project, index) => (
         <motion.div
           key={project.name}
           initial={{ scale: 0.5, opacity: 0 }}
