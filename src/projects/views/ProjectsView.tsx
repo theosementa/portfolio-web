@@ -1,10 +1,11 @@
 import { motion } from "framer-motion"
+import { observer } from "mobx-react-lite"
 import { useEffect } from "react"
 import { HomeSectionHeader } from "../../home/components/HomeSectionHeader"
 import { ProjectCell } from "../components/ProjectCell"
 import { ProjectViewModel } from "../viewmodels/ProjectViewModel"
 
-export const ProjectsView = () => {
+export const ProjectsView = observer(() => {
   const projects = ProjectViewModel.shared.projects
 
   useEffect(() => {
@@ -31,4 +32,4 @@ export const ProjectsView = () => {
       </div>
     </div>
   )
-}
+})

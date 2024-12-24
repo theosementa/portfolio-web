@@ -20,9 +20,9 @@ export const ProjectCell = ({ project }: Props) => {
       <img
         src={project.images.logo}
         alt="project logo"
-        className="rounded-t-2xl w-full h-auto"
+        className="rounded-t-xl w-full h-auto"
       />
-      <div className="absolute top-4 right-4">
+      <div className="absolute top-2 right-2">
         <ProjectStatusRow status={project.status} />
       </div>
 

@@ -7,11 +7,14 @@ interface Props {
 export const ProjectStatusRow = ({ status }: Props) => {
 
   const statusText = status === ProjectStatus.OPENSOURCE ? "Open Source" : "Privé"
-  const color = status === ProjectStatus.OPENSOURCE ? "text-green-600" : "text-red-600"
+  const color = status === ProjectStatus.OPENSOURCE ? "bg-green-600" : "bg-red-600"
 
   return (
-    <div>
-      <p className={`font-sans font-semibold text-xl ${color}`}>{statusText}</p>
+    <div className="flex flex-row gap-2 items-center bg-background-100 px-2 py-1 rounded-lg">
+      <div className={`w-3 h-3 rounded-full ${color}`}>
+
+      </div>
+      <p className="font-sans font-semibold text-md text-white">{statusText}</p>
     </div>
   )
 }
