@@ -3,8 +3,8 @@ import i18n from "../../../i18n";
 
 export const LanguagePicker = () => {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
-  const flagFR = "/assets/images/flags/fr.svg"
-  const flagEN = "/assets/images/flags/uk.svg"
+  const flagFR = "assets/images/flags/fr.svg"
+  const flagEN = "assets/images/flags/uk.svg"
 
   const toggleDropdownVisibility = () => {
     setIsDropdownVisible(!isDropdownVisible);

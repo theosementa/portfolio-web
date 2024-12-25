@@ -3,6 +3,7 @@ import { IoIosDownload } from "react-icons/io";
 import { useNavigate } from "react-router";
 import { ActionButton } from "../../core/components/buttons/ActionButton";
 import { DateRow } from "../../core/components/DateRow";
+import { NetworkPath } from "../../core/network/NetworkPath";
 import { Project } from "../../domain/models/Project";
 import { ProjectStatusRow } from "./ProjectStatusRow";
 
@@ -18,7 +19,7 @@ export const ProjectCell = ({ project }: Props) => {
     <div className="bg-background-100 rounded-2xl border-2 border-background-200 flex flex-col h-full">
       <div className="relative">
       <img
-        src={project.images.logo}
+        src={NetworkPath.baseUrl + project.images.logo}
         alt="project logo"
         className="rounded-t-xl w-full h-auto"
       />

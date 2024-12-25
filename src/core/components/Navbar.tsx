@@ -12,7 +12,7 @@ export const Navbar = () => {
         <Link to="/" >
           <div className='flex flex-row items-center space-x-4'>
             <img
-              src="/assets/images/theosementa.jpg"
+              src="assets/images/theosementa.jpg"
               alt="theo's img"
               className="rounded-full border border-white shadow-lg w-10 h-10"
             />

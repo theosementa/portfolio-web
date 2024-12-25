@@ -9,7 +9,7 @@ import ScrollToAnchor from "./utils/ScrollToAnchor";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/portfolio-web">
       <ScrollToAnchor />
       <Navbar />
       <div>
