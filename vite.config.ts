@@ -5,7 +5,7 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: '0.0.0.0',  // Ecoute sur toutes les interfaces réseau
-    port: 5173,        // Port par défaut pour Vite
+    port: 5006,
+    strictPort: true,
   }
 })

@@ -1,5 +1,5 @@
 export class NetworkPath {
-  static baseUrl: string = "http://localhost:3000";
+  static baseUrl: string = "https://theodev.myftp.org:88";
 
   static Experience = class {
     static base: string = "/experience";
