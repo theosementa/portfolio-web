@@ -1,7 +1,8 @@
+import { observer } from "mobx-react-lite";
 import { NetworkPath } from "../../core/network/NetworkPath";
 import { SocialMediaStore } from "../../core/network/social-media/SocialMediaStore";
 
-export const FooterView = () => {
+export const FooterView = observer(() => {
   const socialMedias = SocialMediaStore.shared.socialMedias;
 
   return (
@@ -31,4 +32,4 @@ export const FooterView = () => {
       <p className="font-sans font-medium text-white text-center">© 2024 Sementa Théo. All rights reserved.</p>
     </div>
   )
-}
+})
