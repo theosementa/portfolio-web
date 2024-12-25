@@ -29,7 +29,8 @@ jobs:
                       git pull
                       npm install
                       npm run build
-                      mkdir -p /etc/static-site/portfolio-web
-                      rm -rf /etc/static-site/portfolio-web/*
-                      mv dist/* /etc/static-site/portfolio-web/
-                      chown -R www-data:www-data /etc/static-site/portfolio-web
+                      mkdir -p /usr/share/nginx/html/portfolio-web
+                      rm -rf /usr/share/nginx/html/portfolio-web/*
+                      mv dist/* /usr/share/nginx/html/portfolio-web/
+                      chown -R www-data:www-data /usr/share/nginx/html/portfolio-web
+
