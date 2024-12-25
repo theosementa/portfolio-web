@@ -29,7 +29,7 @@ jobs:
                       git pull
                       npm install
                       npm run build
-                      sudo mkdir -p /etc/static-site/portfolio-web
-                      sudo rm -rf /etc/static-site/portfolio-web/*
-                      sudo mv dist/* /etc/static-site/portfolio-web/
-                      sudo chown -R www-data:www-data /etc/static-site/portfolio-web
+                      mkdir -p /etc/static-site/portfolio-web
+                      rm -rf /etc/static-site/portfolio-web/*
+                      mv dist/* /etc/static-site/portfolio-web/
+                      chown -R www-data:www-data /etc/static-site/portfolio-web

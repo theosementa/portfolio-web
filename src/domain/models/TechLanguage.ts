@@ -1,4 +1,4 @@
-import { Taggable } from "./interface/Taggable"
+import { Taggable } from "../interface/Taggable"
 
 export interface TechLanguage extends Taggable {
   name: string
