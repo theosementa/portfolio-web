@@ -15,7 +15,7 @@ export const ProjectsView = observer(() => {
   }, [])
 
   return (
-    <div className="flex flex-col gap-16 p-12">
+    <div className="flex flex-col gap-8 md:gap-16 p-4 md:p-12">
       <HomeSectionHeader
         title={t("projects.title")}
         subtitle={t("projects.subtitle")}
