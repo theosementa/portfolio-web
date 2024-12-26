@@ -7,8 +7,7 @@ import { LanguagePicker } from './pickers/LanguagePicker';
 export const Navbar = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false); // État pour gérer l'ouverture du menu mobile
-
+  const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };

@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { TagRow } from "../../core/components/TagRow";
 import { TagsSection } from "../../core/components/TagsSection";
 import { ActionButton } from "../../core/components/buttons/ActionButton";
+import { NetworkPath } from "../../core/network/NetworkPath";
 import { ProjectStore } from "../../core/network/project/ProjectStore";
 import { ActionButtonType } from "../../domain/enum/ActionButtonType";
 
@@ -18,7 +19,7 @@ export const ProjectDetail = () => {
   }
 
   return (
-    <div className="flex flex-col w-full px-24 gap-16 py-12">
+    <div className="flex flex-col w-full px-4 md:px-24 gap-16 py-4 md:py-12">
 
       <div className="flex flex-col gap-8">
         <p className="font-sans text-6xl font-bold text-white" >{project.name} - {t(project.subtitle)}</p>
@@ -36,11 +37,11 @@ export const ProjectDetail = () => {
       </div>
 
       <div className="flex flex-col gap-4">
-        <img src={project.images.banner} alt="banner" className="w-full rounded-3xl" />
-        <div className="grid grid-cols-3 gap-4">
+        <img src={NetworkPath.baseUrl + project.images.banner} alt="banner" className="w-full rounded-3xl" />
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {
             project.images.images.map((image) => (
-              <img src={image} alt="" className="w-full bg-background-100 rounded-3xl p-16" />
+              <img src={NetworkPath.baseUrl + image} alt="" className="w-full bg-background-100 rounded-3xl p-4 md:p-16" />
             ))
           }
         </div>
