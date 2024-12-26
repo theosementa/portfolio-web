@@ -27,7 +27,7 @@ export const Home = observer(() => {
     <div className="flex flex-col gap-32">
       <HeaderWithBio />
 
-      <div id="skills" className="flex flex-col gap-16 px-12">
+      <div id="skills" className="flex flex-col gap-8 md:gap-16 px-4 md:px-12">
         <HomeSectionHeader
           title={t("skills.title")}
           subtitle={t("skills.subtitle")}
@@ -68,7 +68,7 @@ export const Home = observer(() => {
         </div>
       </div>
 
-      <div id="experiences" className="flex flex-col gap-16 px-12">
+      <div id="experiences" className="flex flex-col gap-8 md:gap-16 px-4 md:px-12">
         <HomeSectionHeader
           title={t("experiences.title")}
           subtitle={t("experiences.subtitle")}
@@ -83,7 +83,7 @@ export const Home = observer(() => {
         </div>
       </div>
 
-      <div id="studies" className="flex flex-col gap-16 px-12">
+      <div id="studies" className="flex flex-col gap-8 md:gap-16 px-4 md:px-12">
         <HomeSectionHeader
           title={t("studies.title")}
           subtitle={t("studies.subtitle")}
